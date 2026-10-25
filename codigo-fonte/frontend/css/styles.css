@@ -707,3 +707,43 @@ img.foto-perfil[src$="usuario.svg"] {
 .botao-alteracao:hover {
   background-color: var(--cinza-claro);
 }
+
+.container {
+  .container {
+  display: flex;
+  flex-direction: column; 
+  align-items: flex-start; 
+  gap: 12px;               
+}
+
+.box-sobrenos {
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  background-color: #E88848;
+  width: 100%;
+  height: 50px;
+  padding: 20px;
+  
+
+  .titulo-sobrenos {
+    margin: 10px;
+    font-size: 24px;
+    font-family: 'Poppins';
+}   display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  
+}
+
+p {
+  margin-top: 0;
+  display: inline-block;
+  margin-left: 15px;
+  width: 1315px;
+  height: 200px;
+  padding: 20px;
+  text-align: justify;
+}
+
+}
