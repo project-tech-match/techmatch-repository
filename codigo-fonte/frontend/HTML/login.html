@@ -3,59 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Login - TechMatch</title>
+    <link rel="stylesheet" href="style.css"> 
 </head>
 <body>
-        <div class="logo-cabecalho">
-            <img src="../assets/images/logo-tech-match.png" class="logo-rodape" alt="Logo TechMatch">
-        </div>
+    
+    <div class="container-principal">
+        
+        
+        <section class="painel-esquerdo">
+            <div class="logo-cabecalho">
+                <img src="../assets/images/logo-tech-match.png" class="logo-rodape" alt="Logo TechMatch">
+            </div>
 
-        <div class="descricao">
-            <p class="descricao-login">
-                Conecte seu talento ás melhores oportunidades de estágio em tecnologia.
-            </p>
-            <ul class="lista-descricao">
-                <li>Exclusivo para alunos dos cursos de tecnologia da Fatec</li>
-                <li>Ferramenta de compatibilidade integrada</li>
-                <li>As melhores vagas do mercado centralizadas em um só lugar</li>
-            </ul>
-        </div>
+            <div class="descricao">
+                <p class="descricao-login">
+                    Conecte seu talento às melhores oportunidades de estágio em tecnologia.
+                </p>
+                <ul class="lista-descricao">
+                    <li>Exclusivo para alunos dos cursos de tecnologia da Fatec</li>
+                    <li>Ferramenta de compatibilidade integrada</li>
+                    <li>As melhores vagas do mercado centralizadas em um só lugar</li>
+                </ul>
+            </div>
+        </section>
+
+        
         <main class="acesso">
-            <h1 class="titulo-login">Entrar na plataforma</h1>
-            <h3 class="subtitulo-login">Acesse através de seu e-mail institucional</h3>
+            <div class="conteudo-form">
+                <h1 class="titulo-login">Entrar na plataforma</h1>
+                <h3 class="subtitulo-login">Acesse através de seu e-mail institucional</h3>
 
-            <form action="#" method="post">
-                    <label>Email Institucional</lablel>
+                <form action="#" method="post">
+                    <label>Email</label>
                     <input type="text" name="email">
+                    
                     <label>Senha</label>
-                    <input type="text" name="senha">
+                    <input type="password" name="senha">
                     <a href="esqueci-a-senha.html" class="esqueci-a-senha">Esqueci a senha</a>
 
-            <button type="button" class="botao-entrar-cadastrar">Entrar</button>
-            
-            <h4 class="nao-conta">Não possui uma conta?</h4>
-            <a href="cadastro.html" class="botao-criar-conta">Criar conta</a>
-            
-            </form>
+                    <button type="button" class="botao-entrar-cadastrar">Entrar</button>
+                    
+                    <div class="area-criar-conta">
+                        <span class="nao-conta">Não possui uma conta?</span>
+                        <a href="cadastro.html" class="botao-criar-conta">Criar conta</a>
+                    </div>
+                </form>
+            </div>
         </main>
-    </header>
+    </div>
 
-
-
-    <footer class="rodape">
-        <nav class="links-rodape">
-            <a href="sobre-nos.html" class="sobre-nos">Sobre Nós</a>
-            <a href="duvidas-frequentes.html" class="duvidas-frequentes">Dúvidas Frequentes</a>
-            <a href="termos-de-uso.html" class="termos-de-uso">Termos de Uso</a>
-        </nav>
-
-        <p class="direitos">© TODOS OS DIREITOS RESERVADOS.</p>
-
-        <div class="logotechmatch">
-
-            <img src="../assets/images/logo-tech-match-2.png" alt="Ícone TechMatch">
-            <img src="../assets/images/logo-tech-match-3.png" alt="Texto TechMatch">
-        </div>
-    </footer>
+    
+    
 </body>
 </html>
