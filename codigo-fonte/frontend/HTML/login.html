@@ -3,57 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - TechMatch</title>
-    <link rel="stylesheet" href="style.css"> 
+    <title>Login</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
     
-    <div class="container-principal">
-        
-        
-        <section class="painel-esquerdo">
-            <div class="logo-cabecalho">
-                <img src="../assets/images/logo-tech-match.png" class="logo-rodape" alt="Logo TechMatch">
+    <section class="paineis-login">
+
+        <div class="painel-esquerdo">
+
+            <div class="logo-login">
+                <img src="../assets/images/logo-tech-match-2.png" alt="logo icon">
+                <img src="../assets/images/logo-tech-match-3.png" alt="logo texto">
             </div>
 
             <div class="descricao">
                 <p class="descricao-login">
                     Conecte seu talento às melhores oportunidades de estágio em tecnologia.
                 </p>
+
                 <ul class="lista-descricao">
                     <li>Exclusivo para alunos dos cursos de tecnologia da Fatec</li>
                     <li>Ferramenta de compatibilidade integrada</li>
                     <li>As melhores vagas do mercado centralizadas em um só lugar</li>
                 </ul>
-            </div>
-        </section>
+            </div> 
+        </div> 
 
-        
-        <main class="acesso">
-            <div class="conteudo-form">
-                <h1 class="titulo-login">Entrar na plataforma</h1>
-                <h3 class="subtitulo-login">Acesse através de seu e-mail institucional</h3>
+        <div class="painel-direito">
+            
+            <h1 class="titulo-login">Entrar na plataforma</h1>
+            <h3 class="subtitulo-login">Acesse através de seu e-mail institucional</h3>
+
+            <section class="formulario-login">
 
                 <form action="#" method="post">
-                    <label>Email</label>
-                    <input type="text" name="email">
+
+                    <div class="campo-login">
+                        <label>Email</label>
+                        <input type="text" name="email">
+                    </div>
                     
-                    <label>Senha</label>
-                    <input type="password" name="senha">
-                    <a href="esqueci-a-senha.html" class="esqueci-a-senha">Esqueci a senha</a>
+                    <div class="campo-login">
+                        <label>Senha</label>
+                        <input type="password" name="senha">
+                        <a href="esqueci-a-senha.html" class="esqueci-a-senha">Esqueci a senha</a>
+                    </div>
 
                     <button type="button" class="botao-entrar-cadastrar">Entrar</button>
-                    
+                
                     <div class="area-criar-conta">
-                        <span class="nao-conta">Não possui uma conta?</span>
-                        <a href="cadastro.html" class="botao-criar-conta">Criar conta</a>
+                        <p class="nao-conta">
+                            Não possui uma conta? <a href="cadastro.html">Criar conta</a>
+                        </p>
+                        
                     </div>
                 </form>
-            </div>
-        </main>
-    </div>
+            </section>
+        </div>     
+    </section>
 
-    
-    
 </body>
 </html>
