@@ -13,7 +13,7 @@
 }
 
 
-/* ----- Estilização geral das páginas ----- */
+/* ----- ESTILIZAÇÃO GERAL DAS PÁGINAS ----- */
 
 :root {
   --vermelho: #DF2935;
@@ -608,6 +608,12 @@ main > section {
 
 .personalizacao {
   color: var(--cinza-claro);
+  text-decoration: none;
+}
+
+a.botao-entrar-cadastrar {
+  text-align: center;
+  line-height: 38px;
   text-decoration: none;
 }
 
