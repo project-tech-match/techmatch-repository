@@ -7,119 +7,150 @@
     <link rel="stylesheet" href="../css/styles.css">
 </head>
 <body>
+
     <header>
       <div class="inicio-cabecalho">
-        <div class="logo-cabecalho">
-      <img src="../assets/images/logo-tech-match.png" alt="logo-techmatch">
-        </div>
+      <img class="logo-cabecalho2" src="../assets/images/logo-tech-match.png" alt="logo-techmatch">
       </div>
 
       <nav class="menu-cabecalho">
-            <form class="caixa-pesquisa" action="">
-                <input type="search" class="botao-pesquisa">
-                <button type="submit" class="botao-pesquisa">
-                    <img src="../assets/icons/lupa.svg" alt="Ícone Lupa">
-                </button>
-            <a href="tela-pos-carregamento.html">
-                <button type="button" class="botao-principal">Início</button>
-            </a>
-            <a href="vagas-detalhadas.html">
-                <button type="botton" class="botao-principal">Vagas</button>
-            </a>
-            <a href="perfil-detalhado.html">
-                <button type="button" class="botao-perfil">
-                    <img src="../assets/icons/usuario.svg" alt="Ícone Perfil">
-                </button>
-            </a>
-            <button type="button" class="botao-notificacao">
-                <img src="../assets/icons/sino-notificacao.svg">
+        <form class="caixa-pesquisa" action="">
+          <input type="search" class="botao-pesquisa">
+          <button type="submit" class="botao-pesquisa">
+            <img src="../assets/icons/lupa.svg" alt="Ícone Lupa">
+          </button>
+          <a href="tela-pos-carregamento.html">
+            <button type="button" class="botao-principal">Início</button>
+          </a>
+          <a href="vagas-detalhadas.html">
+            <button type="button" class="botao-principal">Vagas</button>
+          </a>
+          <a href="perfil-detalhado.html">
+            <button type="button" class="botao-perfil">
+              <img src="../assets/icons/usuario.svg" alt="Ícone Perfil">
             </button>
-</form>
+          </a>
+          <button type="button" class="botao-notificacao">
+            <img src="../assets/icons/sino-notificacao.svg" alt="Notificações">
+          </button>
+        </form>
       </nav>
-  
     </header>
 
-    <section class="banner">
+    <section class="banner banner-vagas">
       <div class="banner-inicial">
-        <h1 class="titulo-banner">Olá Aluno.</h1>
-        <p class="subtitulo-banner">
-          Você possui x vagas compátiveis.
-        </p>
-        </div>
-        </section>
+        <h1 class="titulo-banner">Olá, aluno.</h1>
+        <p class="subtitulo-banner">Você possui x vagas compatíveis.</p>
+      </div>
+    </section>
 
-    <nav class="grade-vagas">
-        <h2 class="titulo-informacoes">Vagas em Destaque</h2>
-        <div class="bloco-vagas">
-            <div class="icone-vaga">
-                <img src="../assets/icons/maleta-trabalho.svg" alt="Maleta de Trabalho">
-            </div>
-            <p class="descricao-vagas">
-                Tipo de vaga, Data de publicação, Empresa, Cidade, Área, Modalidade, Salário, Habilidades
-            </p>
-            <div class="box-compatibilidade">
-                <div class="anel-compatibilidade" style="--porcentagem: 0;">
-                <span class="texto-compatibilidade">0%</span>
-            </div>
-        <a href="vagas-detalhadas.html">
-            <button type="button" class="botao-vagas-detalhadas">Ver Detalhes</button>
-        </a>
-        
-        
-            </div>
+    <section class="grade-vagas">
+      <h2 class="titulo-informacoes">Vagas em Destaque</h2>
+
+      <!-- VAGA 1 -->
+      <div class="bloco-vagas">
+        <div class="icone-vaga">
+          <img src="../assets/icons/maleta-trabalho.svg" alt="Maleta de Trabalho">
         </div>
 
-        <div class="bloco-vagas">
-            <div class="icone-vaga">
-                <img src="../assets/icons/maleta-trabalho.svg" alt="Maleta de Trabalho">
-            </div>
-            <p class="descricao-vagas">
-                Tipo de vaga, Data de publicação, Empresa, Cidade, Área, Modalidade, Salário, Habilidades
-            </p>
-            <div class="box-compatibilidade">
-                <div class="anel-compatibilidade" style="--porcentagem: 0;">
-                <span class="texto-compatibilidade">0%</span>
-            </div>
-        <a href="vagas-detalhadas.html">
-            <button type="button" class="botao-vagas-detalhadas">Ver Detalhes</button>
-        </a>
-        
-        
-            </div>
+        <div class="descricao-vagas">
+          <div class="linha-titulo-vaga">
+            <h3 class="titulo-vaga">Tipo de vaga</h3>
+            <span class="data-publicacao">Data de publicação</span>
+          </div>
+          <p class="empresa-vaga">Empresa</p>
+          <div class="tags-vaga">
+            <span class="tag-vaga">Cidade</span>
+            <span class="tag-vaga">Área</span>
+            <span class="tag-vaga">Modalidade</span>
+            <span class="tag-vaga">Salário</span>
+            <span class="tag-vaga">Habilidade</span>
+          </div>
         </div>
 
-        <div class="bloco-vagas">
-            <div class="icone-vaga">
-                <img src="../assets/icons/maleta-trabalho.svg" alt="Maleta de Trabalho">
-            </div>
-            <p class="descricao-vagas">
-                Tipo de vaga, Data de publicação, Empresa, Localidade, Área, Modalidade, Salário, Habilidades
-            </p>
-            <div class="box-compatibilidade">
-                <div class="anel-compatibilidade" style="--porcentagem: 0;">
-                <span class="texto-compatibilidade">0%</span>
-            </div>
-        <a href="vagas-detalhadas.html">
-            <button type="button" class="botao-vagas-detalhadas">Ver Detalhes</button>
-        </a>
-        
-        
-            </div>
+        <div class="box-compatibilidade">
+          <div class="anel-compatibilidade compat-alta" style="--porcentagem: 97;">
+            <span class="texto-compatibilidade">97%</span>
+          </div>
+          <a href="vagas-detalhadas.html">
+            <button type="button" class="botao-vagas-detalhadas">Ver detalhes</button>
+          </a>
         </div>
-        
-    </nav>
+      </div>
+
+      <!-- VAGA 2 -->
+      <div class="bloco-vagas">
+        <div class="icone-vaga">
+          <img src="../assets/icons/maleta-trabalho.svg" alt="Maleta de Trabalho">
+        </div>
+
+        <div class="descricao-vagas">
+          <div class="linha-titulo-vaga">
+            <h3 class="titulo-vaga">Tipo de vaga</h3>
+            <span class="data-publicacao">Data de publicação</span>
+          </div>
+          <p class="empresa-vaga">Empresa</p>
+          <div class="tags-vaga">
+            <span class="tag-vaga">Cidade</span>
+            <span class="tag-vaga">Área</span>
+            <span class="tag-vaga">Modalidade</span>
+            <span class="tag-vaga">Salário</span>
+            <span class="tag-vaga">Habilidade</span>
+          </div>
+        </div>
+
+        <div class="box-compatibilidade">
+          <div class="anel-compatibilidade compat-alta" style="--porcentagem: 91;">
+            <span class="texto-compatibilidade">91%</span>
+          </div>
+          <a href="vagas-detalhadas.html">
+            <button type="button" class="botao-vagas-detalhadas">Ver detalhes</button>
+          </a>
+        </div>
+      </div>
+
+      <!-- VAGA 3 -->
+      <div class="bloco-vagas">
+        <div class="icone-vaga">
+          <img src="../assets/icons/maleta-trabalho.svg" alt="Maleta de Trabalho">
+        </div>
+
+        <div class="descricao-vagas">
+          <div class="linha-titulo-vaga">
+            <h3 class="titulo-vaga">Tipo de vaga</h3>
+            <span class="data-publicacao">Data de publicação</span>
+          </div>
+          <p class="empresa-vaga">Empresa</p>
+          <div class="tags-vaga">
+            <span class="tag-vaga">Localidade</span>
+            <span class="tag-vaga">Área</span>
+            <span class="tag-vaga">Modalidade</span>
+            <span class="tag-vaga">Salário</span>
+            <span class="tag-vaga">Habilidade</span>
+          </div>
+        </div>
+
+        <div class="box-compatibilidade">
+          <div class="anel-compatibilidade compat-media" style="--porcentagem: 88;">
+            <span class="texto-compatibilidade">88%</span>
+          </div>
+          <a href="vagas-detalhadas.html">
+            <button type="button" class="botao-vagas-detalhadas">Ver detalhes</button>
+          </a>
+        </div>
+      </div>
+
+    </section>
 
     <footer class="rodape">
-    <nav class="links-rodape">
-      <a href="sobre-nos.html" class="texto-rodape">Sobre nós</a>
-      <a href="duvidas-frequentes.html"class="texto-rodape">Dúvidas frequentes</a>
-      <a href="termos-de-uso.html" class="texto-rodape">Termos de uso</a>
-    </nav>
-    <p class="rodape__direitos">© TODOS OS DIREITOS RESERVADOS.</p>
-    <img class="logo-rodape" src="../assets/images/logo-tech-match-2.png" alt="Logo TechMatch">
+      <nav class="links-rodape">
+        <a href="sobre-nos.html" class="texto-rodape">Sobre nós</a>
+        <a href="duvidas-frequentes.html" class="texto-rodape">Dúvidas frequentes</a>
+        <a href="termos-de-uso.html" class="texto-rodape">Termos de uso</a>
+      </nav>
+      <p class="rodape-direitos">© TODOS OS DIREITOS RESERVADOS.</p>
+      <img class="logo-rodape" src="../assets/images/logo-tech-match-2.png" alt="Logo TechMatch">
     </footer>
 
-    
-    
 </body>
 </html>
