@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personalização</title>
+    <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+
+    <main class="acesso-personalizacao">
+
+        <!-- Guarda o estado: desmarcado = etapa 1, marcado = etapa 2 -->
+        <input type="checkbox" id="alternar-etapa" class="alternar-etapa" hidden>
+
+        <div class="slider-wrapper" id="slider-wrapper">
+
+            <!-- ETAPA 1 -->
+            <div class="etapa-form">
+                <h1 class="titulo-perfil-academico">Perfil acadêmico e profissional</h1>
+
+                <div class="personalizacao-bloco-branco">
+                    <h2 class="titulo-perfil-academico2">Perfil Acadêmico e Profissional</h2>
+
+                    <label for="instituicao" class="label-selecao">Instituição</label>
+                    <select class="caixa-selecao" id="instituicao">
+                        <option value="" disabled selected>Selecione uma das instituições abaixo</option>
+                        <option value="Ferraz de Vasconcelos">Ferraz de Vasconcelos</option>
+                    </select>
+
+                    <label for="curso" class="label-selecao">Curso Atual</label>
+                    <select class="caixa-selecao" id="curso">
+                        <option value="" disabled selected class="descricao-selecao">Selecione um dos cursos abaixo</option>
+                        <option value="ADS">Análise e Desenvolvimento de Sistemas</option>
+                    </select>
+
+                    <h3 class="label-selecao">Semestre</h3>
+
+                    <div class="botoes-semestre">
+                        <button type="button" class="botao-semestre">1º</button>
+                        <button type="button" class="botao-semestre">2º</button>
+                        <button type="button" class="botao-semestre">3º</button>
+                        <button type="button" class="botao-semestre">4º</button>
+                        <button type="button" class="botao-semestre">5º</button>
+                        <button type="button" class="botao-semestre">6º</button>
+                    </div>
+
+                    <div class="selecao-habilidades">
+                        <h3 class="label-selecao">Habilidades</h3>
+                        <div class="container-tags">
+                            <div class="caixa-digitacao">
+                                <input type="text" id="tags-habilidades" placeholder="Ex.: Python">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <label for="alternar-etapa" class="botao-continuar">Continuar</label>
+            </div>
+
+            <!-- ETAPA 2 -->
+            <div class="etapa-form">
+                <h1 class="titulo-perfil-academico">Perfil acadêmico e profissional</h1>
+
+                <div class="personalizacao-bloco-branco">
+                    <h2 class="criar-conta">Perfil Acadêmico e Profissional</h2>
+                    <h3 class="label-anexo">Anexos</h3>
+                    <h3 class="descritivo-anexo">Anexe aqui seu currículo e certificações</h3>
+
+                    <div class="anexar-arquivos">
+                        <label for="campo-anexo" class="area-upload">
+                            <span class="texto-anexo">Arraste seus arquivos aqui</span>
+                            <input type="file" id="campo-anexo" multiple hidden>
+                        </label>
+
+                        <ul id="lista-ficheiros" class="lista-ficheiros">
+                            <li class="estilizacao-ficheiro">Curriculo.pdf</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <a href="tela-carregamento.html" class="botao-continuar" id="btn-finalizar">Ativar Ferramenta</a>
+                <label for="alternar-etapa" class="botao-voltar">Voltar</label>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>
