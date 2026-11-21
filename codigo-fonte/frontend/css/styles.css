@@ -2034,16 +2034,165 @@ main.pagina-vagas {
     width: 100%;
   }
 }
+/* ----- Mensagens de erro (cadastro e login) ----- */
+
+.mensagem-erro {
+  margin: 0 0 12px;
+  color: var(--vermelho);
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: center;
+}
+
+/* Sem texto, a mensagem não ocupa espaço */
+.mensagem-erro:empty {
+  display: none;
+}
 
 
+/* ----- Cadastro: a caixa tinha altura fixa e cortava a mensagem de erro ----- */
+
+.acesso {
+  height: auto;
+  min-height: 590px;
+  overflow: visible;
+}
 
 
-    
+/* ----- Cadastro: olho mágico com risco quando a senha está visível ----- */
+
+.olho-magico.visivel::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 2px;
+  border-radius: 1px;
+  background-color: var(--bordo);
+  transform: rotate(-45deg);
+}
+
+.olho-magico.visivel .imagem-olho-magico {
+  opacity: 1;
+}
 
 
+/* ----- Cadastro: requisito da senha cumprido fica verde ----- */
+
+.requisitos-senha li.atendido {
+  color: #2e8b57;
+}
 
 
+/* ----- Vagas detalhadas: rodapé sempre no fim da página ----- */
+
+body:has(main.pagina-vagas) {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+body:has(main.pagina-vagas) .rodape {
+  margin-top: auto;
+}
 
 
+/* ----- Vagas detalhadas: botões de salvar e candidatar ----- */
+
+.pagina-vagas .botao-salvar {
+  padding: 4px;
+  border-radius: 6px;
+  opacity: 0.6;
+}
+
+.pagina-vagas .botao-salvar.salva {
+  background-color: var(--laranja-claro);
+  opacity: 1;
+}
+
+.pagina-vagas .candidatura:disabled {
+  opacity: 0.7;
+  cursor: default;
+}
+
+/* ----- Personalização: a caixa tinha altura máxima e cortaria a mensagem de erro ----- */
+
+.acesso-personalizacao {
+  max-height: none;
+}
+
+.etapa-form .mensagem-erro {
+  margin: 10px 0 0;
+}
 
 
+/* ----- Personalização: semestre selecionado ----- */
+
+.botao-semestre.selecionado {
+  background-color: var(--vermelho-rodape);
+  border-color: var(--vermelho-rodape);
+  color: var(--branco);
+}
+
+
+/* ----- Personalização: tags de habilidades ----- */
+
+.container-tags {
+  overflow-y: auto;
+}
+
+.tag-habilidade {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  height: 28px;
+  padding: 0 10px;
+  border-radius: 14px;
+  background-color: var(--laranja);
+  color: var(--bordo);
+  font-size: 13px;
+}
+
+.tag-habilidade button {
+  border: none;
+  background: transparent;
+  color: var(--bordo);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+}
+
+
+/* ----- Personalização: área de arrastar arquivos ----- */
+
+.area-upload.arrastando {
+  border-color: var(--laranja-escuro);
+  background-color: var(--laranja);
+}
+
+
+/* ----- Perfil: habilidades salvas ----- */
+
+.habilidades.preenchido::after {
+  display: none;
+}
+
+.caixa-itens-perfil {
+  flex: 0 0 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 8px;
+  min-height: 73px;
+  margin-top: 18px;
+  padding: 14px;
+  border: 3px solid var(--cinza-principal);
+  border-radius: 10px;
+}
+
+.tag-perfil {
+  padding: 3px 14px;
+  border-radius: 10px;
+  background-color: var(--laranja);
+  color: var(--bordo);
+  font-size: 12px;
+}
