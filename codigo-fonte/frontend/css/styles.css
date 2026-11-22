@@ -4,7 +4,6 @@
   font-weight: 400;
   font-style: normal; 
 }
-
 @font-face{
   font-family: 'Inter';
   src: url(../assets/fonts/Inter/Inter_28pt-Regular.ttf) format('truetype');
@@ -12,9 +11,7 @@
   font-style: normal;
 }
 
-
 /* ----- ESTILIZAÇÃO GERAL DAS PÁGINAS ----- */
-
 :root {
   --vermelho: #DF2935;
   --laranja: #EF975C;
@@ -44,9 +41,7 @@ body {
   background-color: var(--branco);
 }
 
-
 /* ----- ESTILIZAÇÃO DO CABEÇALHO DAS PÁGINAS PRÉ-LOGIN ----- */
-
 header {
   display: flex;
   align-items: center;
@@ -100,11 +95,9 @@ nav.menu-cabecalho > button.botao-principal {
   filter: brightness(1.08);
 }
 
-
 /* ----- ESTILIZAÇÃO DA PÁGINA INICIAL PRÉ-LOGIN ----- */
 
 /* ----- ESTILIZAÇÃO DO BANNER ----- */
-
 .estilizacao-banner {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -136,7 +129,6 @@ main > section {
   z-index: 1;
 }
 
-
 .titulo-banner {
   font-size: 40px;
   font-weight: normal;
@@ -150,7 +142,6 @@ main > section {
   color: var(--branco);
   max-width: 90%;
 }
-
 
 .imagem-banner-principal {
   grid-area: 1 / 2 / 2 / 3;
@@ -172,7 +163,6 @@ main > section {
 }
 
 /* ----- ESTILIZAÇÃO DOS BLOCOS EXPLICATIVOS ----- */
-
 .funcionamento-plataforma {
   width: 100%;
   display: flex;
@@ -208,7 +198,6 @@ main > section {
 }
 
 /* ----- ESTILIZAÇÃO DO BLOCO QUE APRESENTA AS EMPRESAS ----- */
-
 .banner-logo-empresas {
   width: 90%;
   margin: 0 auto 50px auto;
@@ -239,7 +228,6 @@ main > section {
 }
 
 /* ----- ESTILIZAÇÃO DO RODAPÉ ------*/
-
 .rodape {
   display: grid;
   grid-template-columns: 1fr auto;
@@ -292,7 +280,6 @@ main > section {
 }
 
 /* ----- ESTILIZAÇÃO DA PÁGINA DE LOGIN ----- */
-
 .paineis-login {
   display: grid;
   grid-template-columns: 1fr 1fr; 
@@ -440,7 +427,6 @@ main > section {
 }
 
 /* ----- ESTILIZAÇÃO DA PÁGINA DE CADASTRO ----- */
-
 .acesso {
   display: flex;
   background-color: var(--cinza-principal);
@@ -618,7 +604,6 @@ a.botao-entrar-cadastrar {
 }
 
 /* ----- ESTILIZAÇÃO DA PÁGINA DE PERSONALIZAÇÃO ----- */
-
 .acesso-personalizacao {
   display: flex;
   background-color: var(--cinza-principal);
@@ -780,7 +765,6 @@ a.botao-continuar {
 }
 
 /* ----- ETAPA DOS ANEXOS ----- */
-
 .label-anexo {
   margin-top: 0;
   color: var(--bordo);
@@ -839,7 +823,6 @@ a.botao-continuar {
 }
 
 /* ----- ESTRUTURA AÇÃO BOTÃO CONTINUAR ----- */
-
 .slider-wrapper {
   display: flex;
   width: 200%;
@@ -859,7 +842,6 @@ a.botao-continuar {
 }
 
 /*----- ESTILIZAÇÃO DA PÁGINA PERFIL DETALHADO ----- */
-
 .logo-cabecalho2 {
   width: 100%;
   height: auto;
@@ -1012,7 +994,6 @@ body:has(#foto-preview)::after {
 }
 
 /* ----- SESSÃO FOTO DE PERFIL ----- */
-
 div.foto-perfil {
   grid-area: 2 / 2 / 3 / 3;
   align-self: start;
@@ -1062,7 +1043,6 @@ img.foto-perfil[src$="usuario.svg"] {
 }
 
 /* ----- SESSÃO NOME E INFORMAÇÕES ----- */
-
 .informacoes {
   grid-area: 2 / 2 / 3 / 3;
   align-self: start;
@@ -1078,7 +1058,6 @@ img.foto-perfil[src$="usuario.svg"] {
   line-height: 38px;
 }
 
-
 .informacoes-perfil {
   position: relative;
   height: 70px;
@@ -1093,13 +1072,11 @@ img.foto-perfil[src$="usuario.svg"] {
   box-sizing: border-box;
 }
 
-
 .dados-perfil {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
 
 .acoes-perfil {
   position: absolute;
@@ -1112,7 +1089,6 @@ img.foto-perfil[src$="usuario.svg"] {
 }
 
 /* ----- SESSÃO HABILIDADES E CERTIFICAÇÕES ----- */
-
 .habilidades,
 .certificacoes {
   display: flex;
@@ -1146,7 +1122,6 @@ img.foto-perfil[src$="usuario.svg"] {
   text-align: center;
 }
 
-
 .habilidades::after,
 .certificacoes::after {
   content: "";
@@ -1160,7 +1135,6 @@ img.foto-perfil[src$="usuario.svg"] {
 .certificacoes::after {
   margin-top: 24px;
 }
-
 
 .botao-alteracao {
   height: 24px;
@@ -1191,7 +1165,6 @@ img.foto-perfil[src$="usuario.svg"] {
 }
 
 /* ----- PÁGINA SOBRE NÓS ----- */
-
 .principal-sobre-nos {
   width: 100%;
   max-width: 1100px;          /* limita a largura em telas grandes */
@@ -1253,9 +1226,7 @@ h2.titulo-sobrenos {
   margin-top: 6px;
 }
 
-
 /* ----- ESTILIZAÇÃO PÁGINA DE DÚVIDAS FREQUENTES ----- */
-
 .secao-duvidas {
   margin: 15px;
   width: 1330px;
@@ -1264,7 +1235,6 @@ h2.titulo-sobrenos {
   padding: 20px;
   background-color: var(--cinza-mais-claro); 
 }
-
 
 .faixa-topo-duvidas {
     background-color: var(--laranja); 
@@ -1311,14 +1281,11 @@ h2.titulo-sobrenos {
 }
 .botao-duvidas.ativo::after { color: var(--vermelho); }
 
-
 .botao-duvidas.vazio {
     height: 48px;
     background-color: var(--cinza-mais-claro);
 }
 .botao-duvidas.vazio::after { content: ""; }
-
-
 
 .coluna-conteudo {
     flex: 1; 
@@ -1342,7 +1309,6 @@ h2.titulo-sobrenos {
     color: #333;
 }
 
-
 .texto-explicativo {
     background-color: var(--cinza-principal);
     padding: 20px;
@@ -1355,8 +1321,6 @@ h2.titulo-sobrenos {
 }
 
 /* ----- ESTILIZAÇÃO PÁGINA DE CARREGAMENTO ----- */
-
-
 @property --progresso {
   syntax: '<integer>';
   initial-value: 0;
@@ -1376,7 +1340,6 @@ h2.titulo-sobrenos {
   margin: 20px 0 0 30px;
 }
 
-
 .tela-carregamento {
   flex: 1;
   display: flex;
@@ -1388,7 +1351,6 @@ h2.titulo-sobrenos {
   animation: contar 6s linear forwards;
 }
 
-
 .trilha-carregamento {
   width: 100%;
   max-width: 240px;
@@ -1397,7 +1359,6 @@ h2.titulo-sobrenos {
   background-color: var(--outro-cinza);
   overflow: hidden;
 }
-
 
 .barra-carregamento {
   width: 0;
@@ -1420,7 +1381,6 @@ h2.titulo-sobrenos {
   color: var(--bordo);
 }
 
-
 .numero-porcentagem::before {
   content: counter(porcentagem) "%";
   counter-reset: porcentagem var(--progresso);
@@ -1437,9 +1397,6 @@ h2.titulo-sobrenos {
 }
 
 /* ----- ESTILIZAÇÃO PÁGINA PÓS-CARREGAMENTO ----- */
-
-
-
 .banner-vagas {
   margin-top: 20px;                 
   background: linear-gradient(90deg, var(--laranja) 0%, var(--vermelho-rodape) 45%);
@@ -1465,8 +1422,6 @@ h2.titulo-sobrenos {
   height: auto;
 }
 
-
-
 .grade-vagas {
   display: flex;
   flex-direction: column;
@@ -1476,14 +1431,12 @@ h2.titulo-sobrenos {
   margin: 15px auto 60px;
 }
 
-
 .grade-vagas .titulo-informacoes {
   align-self: flex-start;
   min-width: 150px;
   padding: 3px 20px;
   font-size: 14px;
 }
-
 
 .bloco-vagas {
   display: flex;
@@ -1511,8 +1464,6 @@ h2.titulo-sobrenos {
   height: 34px;
   object-fit: contain;
 }
-
-
 
 .descricao-vagas {
   flex: 1;
@@ -1567,7 +1518,6 @@ h2.titulo-sobrenos {
   font-size: 11px;
 }
 
-
 .box-compatibilidade {
   display: flex;
   flex-direction: column;
@@ -1576,7 +1526,6 @@ h2.titulo-sobrenos {
   align-self: stretch;
   gap: 10px;
 }
-
 
 .anel-compatibilidade {
   --cor-anel: #9BE564;              
@@ -1592,7 +1541,6 @@ h2.titulo-sobrenos {
     var(--outro-cinza) 0
   );
 }
-
 
 .anel-compatibilidade::before {
   content: "";
@@ -1627,7 +1575,6 @@ h2.titulo-sobrenos {
   filter: brightness(0.93);
 }
 
-
 @media (max-width: 800px) {
   .banner-vagas .banner-inicial,
   .grade-vagas {
@@ -1640,7 +1587,6 @@ h2.titulo-sobrenos {
 }
 
 /* ----- PÁGINA DE VAGAS DETALHADAS ----- */
-
 /* duas colunas posicionadas por áreas: nada global consegue empurrar a coluna da direita para baixo */
 main.pagina-vagas {
   display: grid;
@@ -1675,7 +1621,6 @@ main.pagina-vagas {
 }
 
 /* ----- Coluna esquerda ----- */
-
 .pagina-vagas .topo-lista {
   display: flex;
   align-items: center;
@@ -1821,7 +1766,6 @@ main.pagina-vagas {
 }
 
 /* ----- Tags ----- */
-
 .pagina-vagas .tags-vaga {
   display: flex;
   flex-wrap: wrap;
@@ -1855,7 +1799,6 @@ main.pagina-vagas {
 }
 
 /* ----- Anel de compatibilidade (independente de outras páginas) ----- */
-
 .pagina-vagas .anel-compatibilidade {
   --cor-anel: #9BE564;
   position: relative;
@@ -1905,7 +1848,6 @@ main.pagina-vagas {
 }
 
 /* ----- Coluna direita ----- */
-
 .pagina-vagas .cartao-detalhe {
   padding: 10px 14px;
   border: 2px solid var(--cinza-principal);
@@ -2007,7 +1949,6 @@ main.pagina-vagas {
 }
 
 /* ----- Telas menores: colunas empilhadas ----- */
-
 @media (max-width: 800px) {
   main.pagina-vagas {
     grid-template-columns: minmax(0, 1fr);
@@ -2034,8 +1975,8 @@ main.pagina-vagas {
     width: 100%;
   }
 }
-/* ----- Mensagens de erro (cadastro e login) ----- */
 
+/* ----- Mensagens de erro (cadastro e login) ----- */
 .mensagem-erro {
   margin: 0 0 12px;
   color: var(--vermelho);
@@ -2048,8 +1989,6 @@ main.pagina-vagas {
 .mensagem-erro:empty {
   display: none;
 }
-
-
 /* ----- Cadastro: a caixa tinha altura fixa e cortava a mensagem de erro ----- */
 
 .acesso {
@@ -2058,9 +1997,7 @@ main.pagina-vagas {
   overflow: visible;
 }
 
-
 /* ----- Cadastro: olho mágico com risco quando a senha está visível ----- */
-
 .olho-magico.visivel::after {
   content: "";
   position: absolute;
@@ -2075,16 +2012,12 @@ main.pagina-vagas {
   opacity: 1;
 }
 
-
 /* ----- Cadastro: requisito da senha cumprido fica verde ----- */
-
 .requisitos-senha li.atendido {
   color: #2e8b57;
 }
 
-
 /* ----- Vagas detalhadas: rodapé sempre no fim da página ----- */
-
 body:has(main.pagina-vagas) {
   min-height: 100vh;
   display: flex;
@@ -2095,9 +2028,7 @@ body:has(main.pagina-vagas) .rodape {
   margin-top: auto;
 }
 
-
 /* ----- Vagas detalhadas: botões de salvar e candidatar ----- */
-
 .pagina-vagas .botao-salvar {
   padding: 4px;
   border-radius: 6px;
@@ -2115,7 +2046,6 @@ body:has(main.pagina-vagas) .rodape {
 }
 
 /* ----- Personalização: a caixa tinha altura máxima e cortaria a mensagem de erro ----- */
-
 .acesso-personalizacao {
   max-height: none;
 }
@@ -2124,18 +2054,14 @@ body:has(main.pagina-vagas) .rodape {
   margin: 10px 0 0;
 }
 
-
 /* ----- Personalização: semestre selecionado ----- */
-
 .botao-semestre.selecionado {
   background-color: var(--vermelho-rodape);
   border-color: var(--vermelho-rodape);
   color: var(--branco);
 }
 
-
 /* ----- Personalização: tags de habilidades ----- */
-
 .container-tags {
   overflow-y: auto;
 }
@@ -2161,17 +2087,13 @@ body:has(main.pagina-vagas) .rodape {
   cursor: pointer;
 }
 
-
 /* ----- Personalização: área de arrastar arquivos ----- */
-
 .area-upload.arrastando {
   border-color: var(--laranja-escuro);
   background-color: var(--laranja);
 }
 
-
 /* ----- Perfil: habilidades salvas ----- */
-
 .habilidades.preenchido::after {
   display: none;
 }
