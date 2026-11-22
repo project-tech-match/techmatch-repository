@@ -326,7 +326,7 @@ main > section {
   margin-top: 30px;
   margin-left: 20px;
   font-size: 16px;
-  color: var(--laranja);
+  color: var(--bordo);
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -393,7 +393,8 @@ main > section {
 .esqueci-a-senha {
   text-decoration: none;
   color: var(--bordo);
-  display: block;
+  display: inline-block;
+  align-self: flex-end;
   text-align: right;
   margin-top: 8px;
   margin-bottom: 24px;
@@ -611,9 +612,9 @@ a.botao-entrar-cadastrar {
   align-items: stretch;
   width: 100%;
   max-width: 510px;
-  max-height: 610px;
+  height: 570px;
   margin: 20px auto;
-  padding: 50px 0;            
+  padding: 20px 16px;            
   border-radius: 12px;
   box-sizing: border-box;
   overflow: hidden;           
@@ -634,18 +635,18 @@ a.botao-entrar-cadastrar {
   border-radius: 10px;
   flex-direction: column;
   align-items: stretch;       
-  padding: 10px;
+  padding: 15px;
   margin-top: 0;
   width: 100%;
   max-width: 510px;
-  height: 440px;
+  height: 510px;
   overflow: hidden;
 }
 
 .titulo-perfil-academico2 {
   width: fit-content;
   margin-top: 0;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: normal;
   display: block;
   word-wrap: break-word;
@@ -765,6 +766,34 @@ a.botao-continuar {
 }
 
 /* ----- ETAPA DOS ANEXOS ----- */
+.personalizacao-bloco-branco2 {
+  display: flex;
+  background-color: var(--branco);
+  border-radius: 10px;
+  flex-direction: column;
+  align-items: stretch;       
+  padding: 15px;
+  margin-top: 0;
+  width: 100%;
+  max-width: 510px;
+  height: 420px;
+  overflow: hidden;
+}
+.criar-conta{
+  width: fit-content;
+  margin-top: 0;
+  font-size: 22px;
+  font-weight: normal;
+  display: block;
+  word-wrap: break-word;
+  text-align: left;
+  background: linear-gradient(90deg, var(--laranja) 0%, var(--vermelho) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  box-sizing: border-box;
+}
 .label-anexo {
   margin-top: 0;
   color: var(--bordo);
@@ -790,7 +819,7 @@ a.botao-continuar {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 120px;
+  height: 100px;
   border: 2px dashed var(--laranja);
   border-radius: 10px;
   background-color: var(--laranja-claro);
@@ -1348,7 +1377,7 @@ h2.titulo-sobrenos {
   justify-content: center;
   padding-bottom: 80px;
   --progresso: 0;
-  animation: contar 6s linear forwards;
+  animation: contar 3s linear forwards;
 }
 
 .trilha-carregamento {
@@ -1365,7 +1394,7 @@ h2.titulo-sobrenos {
   height: 100%;
   border-radius: 10px;
   background-color: var(--vermelho-rodape);
-  animation: crescer 6s linear forwards;
+  animation: crescer 3s linear forwards;
 }
 
 .processamento {
