@@ -26,42 +26,9 @@ Com isso, o objetivo da plataforma é auxiliar os estudantes em sua busca por es
 
 ## 🛠 Tecnologias e Ferramentas: 
 
-### Atuais (Sprint 2):
-
-* **Front-End:** HTML5, CSS3
+* **Front-End:** HTML5, CSS3 e JavaScript
 * **Prototipagem & Design:** Figma
 * **Gestão e Documentação:** GitHub, Astah UML
-
-### Planejadas (Próximas Sprints):
-* **Back-End:** Python (API de Varredura)
-* **Banco de Dados:** SQL
-
-## 💡 Roadmap do projeto:
-
-### Sprint 1:
-- [x] Termo de abertura: nome do projeto, integrantes, organização ou segmento atendido
-- [x] Definição do problema: contextualização da necessidade identificada
-- [x] Público-alvo: descrição dos usuários ou beneficiários
-- [x] Objetivos: objetivo geral e objetivos específicos
-- [x] Justificativa: relevância social, institucional ou tecnológica
-- [x] Escopo inicial: funcionalidades previstas e limitações do projeto
-- [x] Requisitos: requisitos funcionais, não funcionais e regras de negócio
-- [x] Kanban: link compartilhado com backlog, responsáveis e prazos
-- [x] Cronograma: planejamento inicial das quatro sprints
-- [x] Documentação: documentação inicial contendo os elementos citados anteriomente
-
-### Sprint 2:
-- [ ] Revisar componentes da SP1
-- [ ] Mapa do Site (Sitemap)
-- [ ] Wireframes das principais páginas
-- [ ] Protótipo visual da interface
-- [ ] Estrutura inicial do website em HTML
-- [ ] Estilização inicial utilizando CSS
-- [ ] Arquivos do projeto organizados em pastas
-- [ ] Quadro Kanban atualizado com as atividades da Sprint 2
-- [ ] Documentação atualizada com os artefatos produzidos na Sprint 2
-- [ ] Link ou arquivo contendo o código-fonte do projeto
-- [ ] Evidências da evolução do projeto para apresentação
 
 ## 📂 Estrutura do Repositório:
 
@@ -93,6 +60,10 @@ Neste projeto, utilizamos o padrão **Conventional Commits** para manter o hist�
 * **Micaela da Silva Araujo** — *Gerente do Projeto/ Desenvolvedora*
 * **João Marcus Rodrigues Dellea** — *Analista de requisitos/ Desenvolvimento*
 * **Vinícius Paulo Taliatti** — *Analista de qualidade/ Desenvolvimento*
+
+## 🌐Site:
+
+https://project-tech-match.github.io/techmatch-repository/codigo-fonte/frontend/HTML/index.html 
 
 
 ## 📄 Licença:
