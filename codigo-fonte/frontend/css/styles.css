@@ -69,13 +69,10 @@ header {
 .menu-cabecalho {
   display: flex;
   flex: 1;
+  justify-content: flex-end;
   align-items: center;
   gap: 20px;
   margin-left: 15px;
-}
-
-nav.menu-cabecalho > button.botao-principal {
-  margin-right: auto; 
 }
 
 .botao-principal {
