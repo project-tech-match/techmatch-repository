@@ -72,20 +72,8 @@ if (botaoOlho) {
     requisitos[2].classList.toggle('atendido', /[0-9]/.test(senha));
   });
 
-  const btnAbrir = document.getElementsById('abrir-modal');
-  const janelaTermos = document.getElementsById('janela-termos');
-  const btnAceitar = document.getElementById('aceitar-termos');
-
-  btnAbrir.addEventListener('click', () => {
-    janelaTermos.style.display = 'block';
-  });
-  btnAceitar.addEventListener('click', () => {
-    janelaTermos.style.display = 'none';
-  });
-
-
   // Link "termos de uso": abre a página dos termos em outra aba
-  /* document.getElementById('abrir-modal').addEventListener('click', function (evento) {
+  document.getElementById('abrir-modal').addEventListener('click', function (evento) {
     evento.preventDefault();
     window.open('termos-de-uso.html', '_blank');
   });
@@ -93,16 +81,16 @@ if (botaoOlho) {
   // Ao marcar a caixinha, o balão de aviso some
   campoTermos.addEventListener('change', function () {
     campoTermos.setCustomValidity('');
-  }); */
+  });
 
   // Botão Cadastrar
   botaoCadastrar.addEventListener('click', function (evento) {
     evento.preventDefault(); // primeiro confere tudo, depois segue
     mensagemCadastro.textContent = '';
 
-    var nome = campoNome.value.trim();
-    var email = campoEmail.value.trim().toLowerCase();
-    var senha = campoSenha.value;
+    let nome = campoNome.value.trim();
+    let email = campoEmail.value.trim().toLowerCase();
+    let senha = campoSenha.value;
 
     if (nome.indexOf(' ') === -1) {
       mensagemCadastro.textContent = 'Conta não criada: digite seu nome completo.';
@@ -120,7 +108,7 @@ if (botaoOlho) {
     }
 
     // Senha: guarda o que está faltando
-    var faltando = [];
+    let faltando = [];
     if (senha.length < 8) {
       faltando.push('no mínimo 8 caracteres');
     }
@@ -143,29 +131,28 @@ if (botaoOlho) {
     }
 
     // Tudo certo: salva e vai para a próxima página
-    var usuarios = pegarUsuarios();
+    let usuarios = pegarUsuarios();
     usuarios.push({ nome: nome, email: email, senha: senha });
     salvarUsuarios(usuarios);
     localStorage.setItem('usuarioLogado', email);
     window.location.href = 'personalizacao.html';
   });
-
 }
 
 
 /* ===== LOGIN ===== */
 
-var formularioLogin = document.querySelector('.formulario-login');
+let formularioLogin = document.querySelector('.formulario-login');
 
 if (formularioLogin) {
-  var loginEmail = formularioLogin.querySelector('input[name="email"]');
-  var loginSenha = formularioLogin.querySelector('input[name="senha"]');
-  var botaoEntrar = formularioLogin.querySelector('.botao-entrar-cadastrar');
-  var mensagemLogin = criarMensagem(botaoEntrar);
+  let loginEmail = formularioLogin.querySelector('input[name="email"]');
+  let loginSenha = formularioLogin.querySelector('input[name="senha"]');
+  let botaoEntrar = formularioLogin.querySelector('.botao-entrar-cadastrar');
+  let mensagemLogin = criarMensagem(botaoEntrar);
 
   botaoEntrar.addEventListener('click', function () {
-    var email = loginEmail.value.trim().toLowerCase();
-    var usuario = buscarUsuario(email);
+    let email = loginEmail.value.trim().toLowerCase();
+    let usuario = buscarUsuario(email);
 
     if (email === '' || loginSenha.value === '') {
       mensagemLogin.textContent = 'Preencha o e-mail e a senha.';
@@ -189,11 +176,11 @@ if (formularioLogin) {
 
 /* ===== PÓS-CARREGAMENTO ===== */
 
-var bannerVagas = document.querySelector('.banner-vagas');
+let bannerVagas = document.querySelector('.banner-vagas');
 
 if (bannerVagas) {
-  var usuarioInicio = pegarUsuarioLogado();
-  var quantidade = document.querySelectorAll('.bloco-vagas').length;
+  let usuarioInicio = pegarUsuarioLogado();
+  let quantidade = document.querySelectorAll('.bloco-vagas').length;
 
   if (usuarioInicio) {
     bannerVagas.querySelector('.titulo-banner').textContent = 'Olá, ' + usuarioInicio.nome.split(' ')[0] + '.';
@@ -204,10 +191,10 @@ if (bannerVagas) {
 
 /* ===== VAGAS DETALHADAS ===== */
 
-var painelVaga = document.querySelector('.coluna-detalhes');
+let painelVaga = document.querySelector('.coluna-detalhes');
 
 if (painelVaga) {
-  var cartoes = document.querySelectorAll('.cartao-vaga:not(.cartao-vazio)');
+  let cartoes = document.querySelectorAll('.cartao-vaga:not(.cartao-vazio)');
 
   // Clicar em um cartão mostra essa vaga no painel da direita
   cartoes.forEach(function (cartao) {
@@ -222,9 +209,9 @@ if (painelVaga) {
       painelVaga.querySelector('.detalhes-iniciais .empresa-cartao-vaga').textContent =
         cartao.querySelector('.empresa-cartao-vaga').textContent;
 
-      var porcentagem = parseInt(cartao.querySelector('.texto-compatibilidade').textContent, 10);
-      var anel = painelVaga.querySelector('.bloco-compatibilidade .anel-compatibilidade');
-      var anelDoCartao = cartao.querySelector('.anel-compatibilidade');
+      let porcentagem = parseInt(cartao.querySelector('.texto-compatibilidade').textContent, 10);
+      let anel = painelVaga.querySelector('.bloco-compatibilidade .anel-compatibilidade');
+      let anelDoCartao = cartao.querySelector('.anel-compatibilidade');
 
       anel.style.setProperty('--porcentagem', porcentagem);
       anel.querySelector('.texto-compatibilidade').textContent = porcentagem + '%';
@@ -236,12 +223,12 @@ if (painelVaga) {
 
 /* ===== PERFIL ===== */
 
-var fotoPerfil = document.getElementById('foto-preview');
+let fotoPerfil = document.getElementById('foto-preview');
 
 if (fotoPerfil) {
-  var seletorFoto = document.getElementById('selecao-arquivo');
-  var usuarioPerfil = pegarUsuarioLogado();
-  var chaveFoto = 'foto-visitante';
+  let seletorFoto = document.getElementById('selecao-arquivo');
+  let usuarioPerfil = pegarUsuarioLogado();
+  let chaveFoto = 'foto-visitante';
 
   if (usuarioPerfil) {
     document.querySelector('.nome-completo').textContent = usuarioPerfil.nome;
@@ -250,10 +237,10 @@ if (fotoPerfil) {
 
   // Dados preenchidos na página de personalização
   if (usuarioPerfil && usuarioPerfil.perfil) {
-    var dados = usuarioPerfil.perfil;
-    var linhas = document.querySelectorAll('.dados-perfil span');
-    var blocoHabilidades = document.querySelector('.habilidades');
-    var caixaHabilidades = document.createElement('div');
+    let dados = usuarioPerfil.perfil;
+    let linhas = document.querySelectorAll('.dados-perfil span');
+    let blocoHabilidades = document.querySelector('.habilidades');
+    let caixaHabilidades = document.createElement('div');
 
     linhas[0].textContent = 'Instituição: ' + dados.instituicao;
     linhas[1].textContent = 'Curso: ' + dados.curso;
@@ -261,7 +248,7 @@ if (fotoPerfil) {
 
     caixaHabilidades.className = 'caixa-itens-perfil';
     dados.habilidades.forEach(function (nome) {
-      var tag = document.createElement('span');
+      let tag = document.createElement('span');
       tag.className = 'tag-perfil';
       tag.textContent = nome;
       caixaHabilidades.appendChild(tag);
@@ -280,7 +267,7 @@ if (fotoPerfil) {
     if (seletorFoto.files.length === 0) {
       return;
     }
-    var leitor = new FileReader();
+    let leitor = new FileReader();
     leitor.onload = function () {
       fotoPerfil.src = leitor.result;
       localStorage.setItem(chaveFoto, leitor.result);
@@ -292,21 +279,21 @@ if (fotoPerfil) {
 
 /* ===== PERSONALIZAÇÃO ===== */
 
-var sliderPersonalizacao = document.getElementById('slider-wrapper');
-var nomesDosAnexos = [];
+let sliderPersonalizacao = document.getElementById('slider-wrapper');
+let nomesDosAnexos = [];
 
 // Transforma o que foi digitado em uma tag (clique na tag para remover)
 function adicionarHabilidade() {
-  var campo = document.getElementById('tags-habilidades');
-  var texto = campo.value.trim();
+  let campo = document.getElementById('tags-habilidades');
+  let texto = campo.value.trim();
   campo.value = '';
 
   if (texto === '') {
     return;
   }
 
-  var caixa = document.querySelector('.container-tags');
-  var tag = document.createElement('span');
+  let caixa = document.querySelector('.container-tags');
+  let tag = document.createElement('span');
   tag.className = 'tag-habilidade';
   tag.setAttribute('data-nome', texto);
   tag.textContent = texto + ' ×';
@@ -318,11 +305,11 @@ function adicionarHabilidade() {
 
 // Coloca os arquivos escolhidos na lista da tela
 function guardarArquivos(arquivos) {
-  var lista = document.getElementById('lista-ficheiros');
+  let lista = document.getElementById('lista-ficheiros');
 
-  for (var i = 0; i < arquivos.length; i++) {
+  for (let i = 0; i < arquivos.length; i++) {
     if (nomesDosAnexos.indexOf(arquivos[i].name) === -1) {
-      var item = document.createElement('li');
+      let item = document.createElement('li');
       item.className = 'estilizacao-ficheiro';
       item.textContent = arquivos[i].name;
       lista.appendChild(item);
@@ -332,13 +319,13 @@ function guardarArquivos(arquivos) {
 }
 
 if (sliderPersonalizacao) {
-  var selectInstituicao = document.getElementById('instituicao');
-  var selectCurso = document.getElementById('curso');
-  var botoesSemestre = document.querySelectorAll('.botao-semestre');
-  var botaoContinuar = document.querySelector('.etapa-form .botao-continuar');
-  var campoAnexo = document.getElementById('campo-anexo');
-  var areaUpload = document.querySelector('.area-upload');
-  var mensagemEtapa1 = criarMensagem(botaoContinuar);
+  let selectInstituicao = document.getElementById('instituicao');
+  let selectCurso = document.getElementById('curso');
+  let botoesSemestre = document.querySelectorAll('.botao-semestre');
+  let botaoContinuar = document.querySelector('.etapa-form .botao-continuar');
+  let campoAnexo = document.getElementById('campo-anexo');
+  let areaUpload = document.querySelector('.area-upload');
+  let mensagemEtapa1 = criarMensagem(botaoContinuar);
 
   // A lista de anexos começa vazia (o HTML traz um exemplo)
   document.getElementById('lista-ficheiros').textContent = '';
@@ -366,7 +353,7 @@ if (sliderPersonalizacao) {
     adicionarHabilidade(); // caso tenha sobrado algo digitado
     mensagemEtapa1.textContent = '';
 
-    var erro = '';
+    let erro = '';
     if (selectInstituicao.value === '') {
       erro = 'Selecione sua instituição.';
     } else if (selectCurso.value === '') {
@@ -402,15 +389,15 @@ if (sliderPersonalizacao) {
   document.getElementById('btn-finalizar').addEventListener('click', function (evento) {
     evento.preventDefault();
 
-    var habilidades = [];
+    let habilidades = [];
     document.querySelectorAll('.tag-habilidade').forEach(function (tag) {
       habilidades.push(tag.getAttribute('data-nome'));
     });
 
-    var usuarios = pegarUsuarios();
-    var emailLogado = localStorage.getItem('usuarioLogado');
+    let usuarios = pegarUsuarios();
+    let emailLogado = localStorage.getItem('usuarioLogado');
 
-    for (var i = 0; i < usuarios.length; i++) {
+    for (let i = 0; i < usuarios.length; i++) {
       if (usuarios[i].email === emailLogado) {
         usuarios[i].perfil = {
           instituicao: selectInstituicao.value,
