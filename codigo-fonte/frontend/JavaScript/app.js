@@ -1,7 +1,7 @@
 /* ===== FUNÇÕES AUXILIARES ===== */
 
 function pegarUsuarios() {
-  var texto = localStorage.getItem('usuarios');
+  let texto = localStorage.getItem('usuarios');
   if (texto === null) {
     return [];
   }
@@ -14,8 +14,8 @@ function salvarUsuarios(lista) {
 
 // Procura um usuário pelo e-mail (devolve null se não achar)
 function buscarUsuario(email) {
-  var usuarios = pegarUsuarios();
-  for (var i = 0; i < usuarios.length; i++) {
+  let usuarios = pegarUsuarios();
+  for (let i = 0; i < usuarios.length; i++) {
     if (usuarios[i].email === email) {
       return usuarios[i];
     }
@@ -29,7 +29,7 @@ function pegarUsuarioLogado() {
 
 // Cria um parágrafo de mensagem acima do botão e devolve esse parágrafo
 function criarMensagem(botao) {
-  var paragrafo = document.createElement('p');
+  let paragrafo = document.createElement('p');
   paragrafo.className = 'mensagem-erro';
   botao.parentNode.insertBefore(paragrafo, botao);
   return paragrafo;
@@ -43,16 +43,16 @@ function temCaractereEspecial(senha) {
 
 /* ===== CADASTRO ===== */
 
-var botaoOlho = document.getElementById('olho-magico');
+let botaoOlho = document.getElementById('olho-magico');
 
 if (botaoOlho) {
-  var campoNome = document.getElementById('nome-completo');
-  var campoEmail = document.getElementById('email-institucional');
-  var campoSenha = document.getElementById('digite-sua-senha');
-  var campoTermos = document.getElementById('check-termos');
-  var botaoCadastrar = document.querySelector('.botao-entrar-cadastrar');
-  var requisitos = document.querySelectorAll('.requisitos-senha li');
-  var mensagemCadastro = criarMensagem(botaoCadastrar);
+  let campoNome = document.getElementById('nome-completo');
+  let campoEmail = document.getElementById('email-institucional');
+  let campoSenha = document.getElementById('digite-sua-senha');
+  let campoTermos = document.getElementById('check-termos');
+  let botaoCadastrar = document.querySelector('.botao-entrar-cadastrar');
+  let requisitos = document.querySelectorAll('.requisitos-senha li');
+  let mensagemCadastro = criarMensagem(botaoCadastrar);
 
   // Olho mágico: mostra e esconde a senha
   botaoOlho.addEventListener('click', function () {
@@ -66,14 +66,26 @@ if (botaoOlho) {
 
   // Enquanto digita, pinta de verde os requisitos cumpridos
   campoSenha.addEventListener('input', function () {
-    var senha = campoSenha.value;
+    let senha = campoSenha.value;
     requisitos[0].classList.toggle('atendido', senha.length >= 8);
     requisitos[1].classList.toggle('atendido', temCaractereEspecial(senha));
     requisitos[2].classList.toggle('atendido', /[0-9]/.test(senha));
   });
 
+  const btnAbrir = document.getElementsById('abrir-modal');
+  const janelaTermos = document.getElementsById('janela-termos');
+  const btnAceitar = document.getElementById('aceitar-termos');
+
+  btnAbrir.addEventListener('click', () => {
+    janelaTermos.style.display = 'block';
+  });
+  btnAceitar.addEventListener('click', () => {
+    janelaTermos.style.display = 'none';
+  });
+
+
   // Link "termos de uso": abre a página dos termos em outra aba
-  document.getElementById('abrir-modal').addEventListener('click', function (evento) {
+  /* document.getElementById('abrir-modal').addEventListener('click', function (evento) {
     evento.preventDefault();
     window.open('termos-de-uso.html', '_blank');
   });
@@ -81,7 +93,7 @@ if (botaoOlho) {
   // Ao marcar a caixinha, o balão de aviso some
   campoTermos.addEventListener('change', function () {
     campoTermos.setCustomValidity('');
-  });
+  }); */
 
   // Botão Cadastrar
   botaoCadastrar.addEventListener('click', function (evento) {
@@ -137,6 +149,7 @@ if (botaoOlho) {
     localStorage.setItem('usuarioLogado', email);
     window.location.href = 'personalizacao.html';
   });
+
 }
 
 
