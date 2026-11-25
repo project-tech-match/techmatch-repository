@@ -1,4 +1,3 @@
-/* ===== FUNÇÕES AUXILIARES ===== */
 
 function pegarUsuarios() {
   let texto = localStorage.getItem('usuarios');
@@ -12,7 +11,6 @@ function salvarUsuarios(lista) {
   localStorage.setItem('usuarios', JSON.stringify(lista));
 }
 
-// Procura um usuário pelo e-mail (devolve null se não achar)
 function buscarUsuario(email) {
   let usuarios = pegarUsuarios();
   for (let i = 0; i < usuarios.length; i++) {
@@ -27,7 +25,7 @@ function pegarUsuarioLogado() {
   return buscarUsuario(localStorage.getItem('usuarioLogado'));
 }
 
-// Cria um parágrafo de mensagem acima do botão e devolve esse parágrafo
+
 function criarMensagem(botao) {
   let paragrafo = document.createElement('p');
   paragrafo.className = 'mensagem-erro';
@@ -35,13 +33,13 @@ function criarMensagem(botao) {
   return paragrafo;
 }
 
-// A senha tem algum caractere que não é letra, número ou espaço?
+
 function temCaractereEspecial(senha) {
   return /[^A-Za-z0-9À-ÿ\s]/.test(senha);
 }
 
 
-/* ===== CADASTRO ===== */
+/* === CADASTRO === */
 
 let botaoOlho = document.getElementById('olho-magico');
 
@@ -54,7 +52,7 @@ if (botaoOlho) {
   let requisitos = document.querySelectorAll('.requisitos-senha li');
   let mensagemCadastro = criarMensagem(botaoCadastrar);
 
-  // Olho mágico: mostra e esconde a senha
+  
   botaoOlho.addEventListener('click', function () {
     if (campoSenha.type === 'password') {
       campoSenha.type = 'text';
@@ -64,7 +62,7 @@ if (botaoOlho) {
     botaoOlho.classList.toggle('visivel');
   });
 
-  // Enquanto digita, pinta de verde os requisitos cumpridos
+  
   campoSenha.addEventListener('input', function () {
     let senha = campoSenha.value;
     requisitos[0].classList.toggle('atendido', senha.length >= 8);
@@ -72,20 +70,19 @@ if (botaoOlho) {
     requisitos[2].classList.toggle('atendido', /[0-9]/.test(senha));
   });
 
-  // Link "termos de uso": abre a página dos termos em outra aba
+  
   document.getElementById('abrir-modal').addEventListener('click', function (evento) {
     evento.preventDefault();
     window.open('termos-de-uso.html', '_blank');
   });
 
-  // Ao marcar a caixinha, o balão de aviso some
+ 
   campoTermos.addEventListener('change', function () {
     campoTermos.setCustomValidity('');
   });
 
-  // Botão Cadastrar
   botaoCadastrar.addEventListener('click', function (evento) {
-    evento.preventDefault(); // primeiro confere tudo, depois segue
+    evento.preventDefault();
     mensagemCadastro.textContent = '';
 
     let nome = campoNome.value.trim();
@@ -107,7 +104,7 @@ if (botaoOlho) {
       return;
     }
 
-    // Senha: guarda o que está faltando
+    
     let faltando = [];
     if (senha.length < 8) {
       faltando.push('no mínimo 8 caracteres');
@@ -123,14 +120,12 @@ if (botaoOlho) {
       return;
     }
 
-    // Termos de uso: mostra o balão "Aceite os termos de uso."
     if (!campoTermos.checked) {
       campoTermos.setCustomValidity('Aceite os termos de uso.');
       campoTermos.reportValidity();
       return;
     }
 
-    // Tudo certo: salva e vai para a próxima página
     let usuarios = pegarUsuarios();
     usuarios.push({ nome: nome, email: email, senha: senha });
     salvarUsuarios(usuarios);
@@ -140,7 +135,7 @@ if (botaoOlho) {
 }
 
 
-/* ===== LOGIN ===== */
+/* === LOGIN === */
 
 let formularioLogin = document.querySelector('.formulario-login');
 
@@ -164,7 +159,6 @@ if (formularioLogin) {
     }
   });
 
-  // Apertar Enter é o mesmo que clicar em Entrar
   formularioLogin.addEventListener('keydown', function (evento) {
     if (evento.key === 'Enter') {
       evento.preventDefault();
@@ -174,7 +168,7 @@ if (formularioLogin) {
 }
 
 
-/* ===== PÓS-CARREGAMENTO ===== */
+/* === PÓS-CARREGAMENTO === */
 
 let bannerVagas = document.querySelector('.banner-vagas');
 
@@ -189,14 +183,13 @@ if (bannerVagas) {
 }
 
 
-/* ===== VAGAS DETALHADAS ===== */
+/* === VAGAS DETALHADAS === */
 
 let painelVaga = document.querySelector('.coluna-detalhes');
 
 if (painelVaga) {
   let cartoes = document.querySelectorAll('.cartao-vaga:not(.cartao-vazio)');
 
-  // Clicar em um cartão mostra essa vaga no painel da direita
   cartoes.forEach(function (cartao) {
     cartao.addEventListener('click', function () {
       cartoes.forEach(function (outro) {
@@ -221,7 +214,7 @@ if (painelVaga) {
 }
 
 
-/* ===== PERFIL ===== */
+/* === PERFIL === */
 
 let fotoPerfil = document.getElementById('foto-preview');
 
@@ -235,7 +228,6 @@ if (fotoPerfil) {
     chaveFoto = 'foto-' + usuarioPerfil.email;
   }
 
-  // Dados preenchidos na página de personalização
   if (usuarioPerfil && usuarioPerfil.perfil) {
     let dados = usuarioPerfil.perfil;
     let linhas = document.querySelectorAll('.dados-perfil span');
@@ -257,12 +249,10 @@ if (fotoPerfil) {
     blocoHabilidades.appendChild(caixaHabilidades);
   }
 
-  // Mostra a foto salva, se existir
   if (localStorage.getItem(chaveFoto)) {
     fotoPerfil.src = localStorage.getItem(chaveFoto);
   }
 
-  // Ao escolher uma imagem, mostra e salva
   seletorFoto.addEventListener('change', function () {
     if (seletorFoto.files.length === 0) {
       return;
@@ -277,12 +267,11 @@ if (fotoPerfil) {
 }
 
 
-/* ===== PERSONALIZAÇÃO ===== */
+/* === PERSONALIZAÇÃO === */
 
 let sliderPersonalizacao = document.getElementById('slider-wrapper');
 let nomesDosAnexos = [];
 
-// Transforma o que foi digitado em uma tag (clique na tag para remover)
 function adicionarHabilidade() {
   let campo = document.getElementById('tags-habilidades');
   let texto = campo.value.trim();
@@ -303,7 +292,6 @@ function adicionarHabilidade() {
   caixa.insertBefore(tag, campo.parentNode);
 }
 
-// Coloca os arquivos escolhidos na lista da tela
 function guardarArquivos(arquivos) {
   let lista = document.getElementById('lista-ficheiros');
 
@@ -327,10 +315,8 @@ if (sliderPersonalizacao) {
   let areaUpload = document.querySelector('.area-upload');
   let mensagemEtapa1 = criarMensagem(botaoContinuar);
 
-  // A lista de anexos começa vazia (o HTML traz um exemplo)
   document.getElementById('lista-ficheiros').textContent = '';
 
-  // Semestre: só um botão fica selecionado
   botoesSemestre.forEach(function (botao) {
     botao.addEventListener('click', function () {
       botoesSemestre.forEach(function (outro) {
@@ -340,7 +326,6 @@ if (sliderPersonalizacao) {
     });
   });
 
-  // Habilidades: Enter cria a tag
   document.getElementById('tags-habilidades').addEventListener('keydown', function (evento) {
     if (evento.key === 'Enter') {
       evento.preventDefault();
@@ -348,7 +333,6 @@ if (sliderPersonalizacao) {
     }
   });
 
-  // Continuar: só passa para a etapa 2 se tudo estiver preenchido
   botaoContinuar.addEventListener('click', function (evento) {
     adicionarHabilidade(); // caso tenha sobrado algo digitado
     mensagemEtapa1.textContent = '';
@@ -365,18 +349,16 @@ if (sliderPersonalizacao) {
     }
 
     if (erro !== '') {
-      evento.preventDefault(); // não deixa trocar de etapa
+      evento.preventDefault();
       mensagemEtapa1.textContent = erro;
     }
   });
 
-  // Anexos: clicar para escolher
   campoAnexo.addEventListener('change', function () {
     guardarArquivos(campoAnexo.files);
     campoAnexo.value = '';
   });
 
-  // Anexos: arrastar e soltar
   areaUpload.addEventListener('dragover', function (evento) {
     evento.preventDefault();
   });
@@ -385,7 +367,6 @@ if (sliderPersonalizacao) {
     guardarArquivos(evento.dataTransfer.files);
   });
 
-  // Ativar Ferramenta: salva o perfil e vai para o carregamento
   document.getElementById('btn-finalizar').addEventListener('click', function (evento) {
     evento.preventDefault();
 
