@@ -636,7 +636,7 @@ a.botao-entrar-cadastrar {
   margin-top: 0;
   width: 100%;
   max-width: 510px;
-  height: 510px;
+  height: 490px;
   overflow: hidden;
 }
 
@@ -773,7 +773,7 @@ a.botao-continuar {
   margin-top: 0;
   width: 100%;
   max-width: 510px;
-  height: 420px;
+  height: 400px;
   overflow: hidden;
 }
 .criar-conta{
@@ -2174,7 +2174,7 @@ body:has(main.pagina-vagas) .rodape {
   z-index: 0;
 }
 
-/* ----- Pontinhos de etapa no canto superior direito do cartão claro ----- */
+/* ----- Pontinhos de etapa no canto superior direito do cartão claro -----
 .acesso::after {
   content: "";
   grid-area: 2 / 1 / 3 / 2;
@@ -2187,7 +2187,7 @@ body:has(main.pagina-vagas) .rodape {
     radial-gradient(circle 4px at 4px 4px, var(--bordo) 98%, transparent 100%),
     radial-gradient(circle 4px at 18px 4px, var(--vermelho-rodape) 98%, transparent 100%);
   z-index: 1;
-}
+} */
 
 /* ----- Faixa superior: corações + "Dados Pessoais" ----- */
 .dados-pessoais {
@@ -2217,9 +2217,9 @@ body:has(main.pagina-vagas) .rodape {
   grid-area: 2 / 1 / 3 / 2;
   position: relative;
   z-index: 1;
-  justify-self: start;
-  margin: 20px 28px 16px;
-  font-size: 30px;
+  justify-self: flex-start;
+  margin: 10px 0px 16px;
+  font-size: 22px;
 }
 
 /* ----- Formulário dentro do cartão claro ----- */
